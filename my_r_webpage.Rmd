@@ -1,16 +1,13 @@
----
-title: "My R Webpage"
-output: ioslides_presentation
----
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## May 31, 2019
 
-```{r, echo = TRUE}
+```{r, echo=FALSE}
 library(leaflet)
-my_map <- leaflet() %>% addTiles() %>% 
-        addMapPane(lat=39.953054, lng=-75.192833, popup="University of Pennsylvania")
+my_map <- leaflet() %>% 
+        addTiles() %>% 
+        addMarkers(lat=39.953054, lng=-75.192833, popup="University of Pennsylvania")
+my_map
 ```
