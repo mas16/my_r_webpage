@@ -7,8 +7,29 @@ by mas
 
 ```{r, echo=FALSE}
 library(leaflet)
-my_map <- leaflet() %>% 
+
+lat <- c(39.956302, 39.953970, 39.952831, 39.952490, 39.954640, 39.953595, 39.953077, 39.950906, 39.951087, 39.947747, 39.953538, 39.953210, 39.951193) 
+
+lng <- c(-75.202234, -75.200343, -75.203063, -75.199370, -75.194883, -75.193177, -75.192233, -75.195022, -75.198225, -75.192560, -75.192545, -75.193193, -75.199008)
+
+penn_coffee <- data.frame(lat, lng)
+
+sites <- c(
+        "<a href=https://www.yelp.com/biz/green-line-cafe-philadelphia-7>Green Line Cafe</a>", 
+        "<a href=https://www.yelp.com/biz/starbucks-philadelphia-70>Starbucks</a>",
+        "<a href=https://www.yelp.com/biz/saxbys-coffee-philadelphia-35>Saxby's</a>",
+        "<a href=https://www.yelp.com/biz/starbucks-philadelphia-29>Starbucks</a>",
+        "<a href=https://www.yelp.com/biz/wawa-philadelphia-28>Wawa</a>",
+        "<a href=https://www.yelp.com/biz/federal-donuts-philadelphia-5>Federal Donuts</a>",
+        "<a href=https://www.yelp.com/biz/starbucks-philadelphia-64>Starbucks</a>",
+        "<a href=https://www.yelp.com/biz/williams-cafe-philadelphia-2>William's Cafe</a>",
+        "<a href=https://www.yelp.com/biz/kitchen-gia-philadelphia>Kitchen Gia</a>",
+        "<a href=https://www.yelp.com/biz/gia-pronto-philadelphia-5>Gia Pronto</a>",
+        "<a href=https://www.yelp.com/biz/avril-50-philadelphia>Avril 50</a>",
+        "<a href=https://www.yelp.com/biz/united-by-blue-philadelphia-3>United by Blue</a>",
+        "<a href=https://www.yelp.com/biz/wawa-philadelphia-29>Wawa</a>")
+
+penn_coffee %>% leaflet() %>% 
         addTiles() %>% 
-        addMarkers(lat=39.953054, lng=-75.192833, popup="University of Pennsylvania")
-my_map
+        addMarkers(popup=sites)
 ```
