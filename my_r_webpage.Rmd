@@ -2,8 +2,11 @@
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## May 31, 2019
+### May 31, 2019
 by mas
+
+#### Coffee Shops Near the University of Pennsylvania
+Click on the pins for a link to the coffee shop's Yelp page
 
 ```{r, echo=FALSE}
 library(leaflet)
